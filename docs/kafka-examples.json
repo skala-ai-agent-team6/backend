@@ -1,0 +1,258 @@
+[
+  {
+    "eventId": "a0000000-0000-0000-0000-000000000001",
+    "eventType": "DIAGNOSIS_REQUESTED",
+    "schemaVersion": 2,
+    "occurredAt": "2026-10-20T01:00:00Z",
+    "repairId": "1",
+    "taskId": "1",
+    "correlationId": "90000000-0000-0000-0000-000000000001",
+    "inputRevision": 1,
+    "executionId": "a0000000-0000-0000-0000-000000000003",
+    "sequence": 0,
+    "payload": {
+      "repair": {
+        "id": "1",
+        "product_snapshot": {
+          "id": "1",
+          "serial_number": "ROBOT-SEOUL-001",
+          "model_id": "1",
+          "model_code": "R1",
+          "information": {
+            "manufacturer": "Demo"
+          },
+          "components": []
+        },
+        "symptom": "바퀴 고장 원문",
+        "error_codes": [
+          "E01",
+          "E02"
+        ],
+        "firmware_version": "1.2",
+        "user_input": {
+          "customerDescription": "기사 원문"
+        }
+      },
+      "task": {
+        "id": "1"
+      },
+      "attachments": [
+        {
+          "id": "1",
+          "request_id": null,
+          "mime_type": "image/png",
+          "byte_size": 1024,
+          "sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+          "downloadPath": "/internal/attachments/1"
+        }
+      ],
+      "attachmentIds": [
+        "1"
+      ],
+      "addedAttachmentIds": [],
+      "requestId": null,
+      "requestKey": null,
+      "round": 0,
+      "checkpoint": null
+    }
+  },
+  {
+    "eventId": "a0000000-0000-0000-0000-000000000011",
+    "eventType": "DIAGNOSIS_STARTED",
+    "schemaVersion": 2,
+    "occurredAt": "2026-10-20T01:00:00Z",
+    "repairId": "1",
+    "taskId": "1",
+    "correlationId": "90000000-0000-0000-0000-000000000001",
+    "inputRevision": 1,
+    "executionId": "a0000000-0000-0000-0000-000000000003",
+    "sequence": 1,
+    "payload": {
+      "stage": "STARTED"
+    }
+  },
+  {
+    "eventId": "a0000000-0000-0000-0000-000000000012",
+    "eventType": "DIAGNOSIS_PROGRESS",
+    "schemaVersion": 2,
+    "occurredAt": "2026-10-20T01:00:00Z",
+    "repairId": "1",
+    "taskId": "1",
+    "correlationId": "90000000-0000-0000-0000-000000000001",
+    "inputRevision": 1,
+    "executionId": "a0000000-0000-0000-0000-000000000003",
+    "sequence": 2,
+    "payload": {
+      "stage": "INSPECTING_PHOTOS"
+    }
+  },
+  {
+    "eventId": "a0000000-0000-0000-0000-000000000013",
+    "eventType": "TOOL_EXECUTED",
+    "schemaVersion": 2,
+    "occurredAt": "2026-10-20T01:00:00Z",
+    "repairId": "1",
+    "taskId": "1",
+    "correlationId": "90000000-0000-0000-0000-000000000001",
+    "inputRevision": 1,
+    "executionId": "a0000000-0000-0000-0000-000000000003",
+    "sequence": 3,
+    "payload": {
+      "tool": "photo-inspector",
+      "toolVersion": "1",
+      "modelVersion": "team-model-version",
+      "output": {
+        "note": "example"
+      }
+    }
+  },
+  {
+    "eventId": "a0000000-0000-0000-0000-000000000014",
+    "eventType": "PHOTO_REQUESTED",
+    "schemaVersion": 2,
+    "occurredAt": "2026-10-20T01:00:00Z",
+    "repairId": "1",
+    "taskId": "1",
+    "correlationId": "90000000-0000-0000-0000-000000000001",
+    "inputRevision": 1,
+    "executionId": "a0000000-0000-0000-0000-000000000003",
+    "sequence": 4,
+    "payload": {
+      "requestKey": "c0000000-0000-0000-0000-000000000001",
+      "round": 1,
+      "bodyPart": "wheel",
+      "description": "바퀴 하부 사진",
+      "checkpoint": "langgraph-thread:checkpoint"
+    }
+  },
+  {
+    "eventId": "a0000000-0000-0000-0000-000000000021",
+    "eventType": "DIAGNOSIS_RESUMED",
+    "schemaVersion": 2,
+    "occurredAt": "2026-10-20T01:00:00Z",
+    "repairId": "1",
+    "taskId": "1",
+    "correlationId": "90000000-0000-0000-0000-000000000001",
+    "inputRevision": 2,
+    "executionId": "a0000000-0000-0000-0000-000000000099",
+    "sequence": 0,
+    "payload": {
+      "repair": {
+        "id": "1",
+        "product_snapshot": {
+          "id": "1",
+          "serial_number": "ROBOT-SEOUL-001",
+          "model_id": "1",
+          "model_code": "R1",
+          "information": {
+            "manufacturer": "Demo"
+          },
+          "components": []
+        },
+        "symptom": "바퀴 고장 원문",
+        "error_codes": [
+          "E01",
+          "E02"
+        ],
+        "firmware_version": "1.2",
+        "user_input": {
+          "customerDescription": "기사 원문"
+        }
+      },
+      "task": {
+        "id": "1"
+      },
+      "attachments": [
+        {
+          "id": "1",
+          "request_id": null,
+          "mime_type": "image/png",
+          "byte_size": 1024,
+          "sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+          "downloadPath": "/internal/attachments/1"
+        },
+        {
+          "id": "2",
+          "request_id": "1",
+          "mime_type": "image/png",
+          "byte_size": 1024,
+          "sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+          "downloadPath": "/internal/attachments/2"
+        }
+      ],
+      "attachmentIds": [
+        "1",
+        "2"
+      ],
+      "addedAttachmentIds": [
+        "2"
+      ],
+      "requestId": "1",
+      "requestKey": "c0000000-0000-0000-0000-000000000001",
+      "round": 1,
+      "checkpoint": "langgraph-thread:checkpoint"
+    }
+  },
+  {
+    "eventId": "a0000000-0000-0000-0000-000000000022",
+    "eventType": "DIAGNOSIS_COMPLETED",
+    "schemaVersion": 2,
+    "occurredAt": "2026-10-20T01:00:00Z",
+    "repairId": "1",
+    "taskId": "1",
+    "correlationId": "90000000-0000-0000-0000-000000000001",
+    "inputRevision": 2,
+    "executionId": "a0000000-0000-0000-0000-000000000099",
+    "sequence": 1,
+    "payload": {
+      "summary": "모터 고장 추정",
+      "modelVersion": "team-model-version",
+      "repairMethod": "모터 교체",
+      "candidates": [
+        {
+          "rank": 1,
+          "confidence": 0.85,
+          "cause": "motor obstruction",
+          "explanation": "사진 관찰"
+        }
+      ],
+      "recommendedParts": [
+        {
+          "partId": "1",
+          "quantity": 1
+        }
+      ],
+      "evidence": [
+        {
+          "type": "PHOTO",
+          "attachmentId": "2",
+          "annotation": {
+            "x": 0.1,
+            "y": 0.2,
+            "width": 0.3,
+            "height": 0.3
+          }
+        },
+        {
+          "type": "MANUAL",
+          "citation": "DEMO-MANUAL §2"
+        }
+      ]
+    }
+  },
+  {
+    "eventId": "a0000000-0000-0000-0000-000000000023",
+    "eventType": "DIAGNOSIS_FAILED",
+    "schemaVersion": 2,
+    "occurredAt": "2026-10-20T01:00:00Z",
+    "repairId": "1",
+    "taskId": "1",
+    "correlationId": "90000000-0000-0000-0000-000000000001",
+    "inputRevision": 4,
+    "executionId": "a0000000-0000-0000-0000-000000000003",
+    "sequence": 1,
+    "payload": {
+      "errorCode": "INCONCLUSIVE_AFTER_THIRD_PHOTO"
+    }
+  }
+]

@@ -1,0 +1,11 @@
+INSERT INTO service_center(id,code,name,region,address,phone) OVERRIDING SYSTEM VALUE VALUES (1,'SEOUL','Seoul','Seoul','Demo Seoul','02-000-0000'),(2,'BUSAN','Busan','Busan','Demo Busan','051-000-0000') ON CONFLICT DO NOTHING;
+INSERT INTO factory(id,name,country,region,address,phone) OVERRIDING SYSTEM VALUE VALUES (1,'Demo factory','KR','Gyeonggi','Demo factory address','031-000-0000') ON CONFLICT DO NOTHING;
+INSERT INTO product_model(id,model_code,name) OVERRIDING SYSTEM VALUE VALUES (1,'R1','Robot R1'),(2,'R2','Robot R2') ON CONFLICT DO NOTHING;
+INSERT INTO part(id,part_number,name,category) OVERRIDING SYSTEM VALUE VALUES (1,'MOTOR-001','Wheel motor','MOTOR'),(2,'LIDAR-001','Lidar','OTHER') ON CONFLICT DO NOTHING;
+INSERT INTO model_part VALUES (1,1),(2,2) ON CONFLICT DO NOTHING;
+INSERT INTO part_supplier VALUES (1,1,3),(2,1,5) ON CONFLICT DO NOTHING;
+INSERT INTO part_lot(id,part_id,factory_id,lot_number) OVERRIDING SYSTEM VALUE VALUES (1,1,1,'LOT-MOTOR-001') ON CONFLICT DO NOTHING;
+INSERT INTO product(id,serial_number,model_id,information) OVERRIDING SYSTEM VALUE VALUES (1,'ROBOT-SEOUL-001',1,'{"manufacturer":"Demo","specifications":{"batteryWh":60}}'),(2,'ROBOT-BUSAN-001',2,'{"manufacturer":"Demo"}') ON CONFLICT DO NOTHING;
+INSERT INTO product_component(id,product_id,part_id,lot_id,slot_code,installed_at) OVERRIDING SYSTEM VALUE VALUES (1,1,1,1,'MOTOR-LEFT',now()-interval '1 year'),(2,2,2,NULL,'LIDAR',now()-interval '1 year') ON CONFLICT DO NOTHING;
+INSERT INTO warehouse(id,name,region,address,phone) OVERRIDING SYSTEM VALUE VALUES (1,'Central warehouse','Seoul','Demo warehouse','02-000-0000') ON CONFLICT DO NOTHING;
+INSERT INTO inventory(warehouse_id,part_id,on_hand,reserved) VALUES (1,1,10,0),(1,2,0,0) ON CONFLICT DO NOTHING;
